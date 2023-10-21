@@ -1,5 +1,6 @@
 body{
     overflow-x: hidden;
+    background-color:   rgba(121, 184, 39, 0.938)  ;
 }
 
 .card {
@@ -235,7 +236,7 @@ body{
   }
 
   .form-container {
-    width: 400px;
+    width: 361px;
     background: linear-gradient(#212121, #212121) padding-box,
                 linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
     border: 2px solid transparent;
@@ -352,5 +353,12 @@ body{
     background-color: #fff;
     border-color: #fff;
   }
-  
+
+  .box {
+    --mask:
+      radial-gradient(125.22px at 50% 168.00px,#000 99%,#0000 101%) calc(50% - 112px) 0/224px 100%,
+      radial-gradient(125.22px at 50% -112px,#0000 99%,#000 101%) 50% 56px/224px 100% repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+  }
   
