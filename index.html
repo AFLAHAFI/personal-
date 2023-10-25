@@ -12,12 +12,24 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark " style="position: fixed; z-index: 1;  background-color: rgba(78, 27, 27, 0.822); width: 100%;">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      style="
+        position: fixed;
+        z-index: 2;
+        background-color: rgba(78, 27, 27, 0.822);
+        width: 100%;
+      "
+    >
       <a class="navbar-brand" href="#">AFLAH</a>
 
       <button
@@ -34,19 +46,22 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link " href="#">Home <span class="sr-only"></span></a>
+            <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">About</a>
+            <a class="nav-link text-white" href="#bioaa">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">Education</a>
+            <a class="nav-link text-white" href="#education">Education</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <div class="container-fluid overflow-hidden " style="background-color: rgba(180, 252, 86, 0.747);">
+    <div
+      class="container-fluid overflow-hidden"
+      style="background-color: rgba(180, 252, 86, 0.747)"
+    >
       <div class="row">
         <div class="col-md-6">
           <div class="wlw p-2">
@@ -57,139 +72,236 @@
             <p class="text-dark">
               Discover my skills and expertise in web development.
             </p>
-            <i class="fa-brands fa-github" style="font-size: 2rem;"></i>
-            <i class="fa-brands fa-html5"  style="font-size: 2rem; margin-left:20px; color: red;"></i>
-            <i class="fa-regular fa-file-code" style="font-size: 2rem;  margin-left:20px; color:rgba(20, 170, 170, 0.808);"></i>
-            <i class="fa-brands fa-java" style="font-size: 2rem;  margin-left:20px; color: forestgreen;"></i>
-            <i class="fa-brands fa-bootstrap" style="font-size: 2rem;  margin-left:20px; color: rgb(122, 9, 122);"></i>
+            <i class="fa-brands fa-github" style="font-size: 2rem"></i>
+            <i
+              class="fa-brands fa-html5"
+              style="font-size: 2rem; margin-left: 20px; color: red"
+            ></i>
+            <i
+              class="fa-regular fa-file-code"
+              style="
+                font-size: 2rem;
+                margin-left: 20px;
+                color: rgba(20, 170, 170, 0.808);
+              "
+            ></i>
+            <i
+              class="fa-brands fa-java"
+              style="font-size: 2rem; margin-left: 20px; color: forestgreen"
+            ></i>
+            <i
+              class="fa-brands fa-bootstrap"
+              style="
+                font-size: 2rem;
+                margin-left: 20px;
+                color: rgb(122, 9, 122);
+              "
+            ></i>
           </div>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6"
+        data-aos="fade-right">
           <div class="card">
-            <h2>CARD</h2>
+            <img src="photo/aflah1.webp" class="rounded" alt="" />
           </div>
         </div>
       </div>
     </div>
 
-
-
-   <div class="container-fluid  overflow-hidden" style="background-color:  rgba(154, 216, 73, 0.747);">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card">
-          <h2>CARD</h2>
-        </div>
-
-      </div>
-
-      <div class="col-md-4">
-        <div class="notification" style="height: 454px; width:361px; margin-top:80px; margin-left:-5px;">
-          <div class="notiglow"></div>
-          <div class="notiborderglow"></div>
-          <div class="notititle text-center" style="font-size: 50px;" ><h1>BIO</h1></div>
-         
-          <div class="notibody"><i class=""> <p><strong>Personal Information:</strong> Aflah,Male <br>
-
-            <strong>Objective:</strong>Seeking a position as a web developer <br> to utilize my skills in  development, creating dynamic <br> and visually appealing websites that deliver an <br> exceptional user experience. <br>
-            
-            <strong>Education:</strong>6th standerd,Najumul huda hirher secondary school. <br>
-            
-            <strong>Skills:</strong>HTML,CSS,BOOSTRAP <br>
-            
-            <strong>Achievements:</strong>Agarbatti making,Web pages making,Cooking <br>
-            
-            <strong>Interests:</strong>Cycling,Drawing, Editing Video,Swiming ect. <br>
-            
-            </p></i>
-             
-            <div style="margin-left: 25% ; margin-top: 20px;">
-          <a href="" ><i class="fa-brands fa-youtube" style="font-size: 2rem; color: rgba(248, 61, 61, 0.877);"></i></a> 
-          <a href="" ><i class="fa-brands fa-facebook" style="font-size: 2rem; color: #3b5998; margin-left: 15px;"></i></a>
-          <a href="" ><i class="fa-brands fa-github" style="font-size: 2rem; color: rgba(255, 255, 255, 0.877); margin-left: 15px;"></i></a> 
-        </div>
-        </div>
-         
-        </div>
-        
+    <div
+      id="bioaa"
+      class="container-fluid overflow-hidden"
+      style="background-color: rgba(154, 216, 73, 0.747)"
+    >
+      <div class="row">
+        <div class="col-md-4" data-aos="fade-right">
+          <div class="card">
+            <img src="photo/aflah2.webp" class="rounded" alt="" />
           </div>
+        </div>
 
-          <div class="col-md-4">
-            <div class="card">
-             
-          </div>
-          </div>
-      </div>
-      </div>
+        <div class="col-md-4" data-aos="fade-right">
+          <div
+            class="notification"
+            style="
+              height: 454px;
+              width: 361px;
+              margin-top: 80px;
+              margin-left: -5px;
+            "
+          >
+            <div class="notiglow"></div>
+            <div class="notiborderglow"></div>
+            <div class="notititle text-center" style="font-size: 50px">
+              <h1>BIO</h1>
+            </div>
 
+            <div class="notibody">
+              <i class="">
+                <p>
+                  <strong>Personal Information:</strong> Aflah,Male <br />
 
+                  <strong>Objective:</strong>Seeking a position as a web
+                  developer <br />
+                  to utilize my skills in development, creating dynamic <br />
+                  and visually appealing websites that deliver an <br />
+                  exceptional user experience. <br />
 
-      <div class="container-fluid overflow-hidden" style="background-color: rgba(130, 182, 61, 0.747) ;">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="cardedu">
-         <img src="photo/huda.webp" alt="" style="height: 374px; width: 480px;">
-              <div class="cardedu__content">
-                <p class="cardedu__title">Najumul Huda</p>
-                <p class="cardedu__description">  Prinsipal-Muhammed shafi <br>
-                  lKG to +2 <br>
-                   Village-Kottakal <br>
-                   Municipality-Kottakal <br>
-           Thaluk-Tirur <br>
-           District-Malapuram </p>
+                  <strong>Education:</strong>6th standerd,Najumul huda hirher
+                  secondary school. <br />
+
+                  <strong>Skills:</strong>HTML,CSS,BOOSTRAP <br />
+
+                  <strong>Achievements:</strong>Agarbatti making,Web pages
+                  making,Cooking <br />
+
+                  <strong>Interests:</strong>Cycling,Drawing, Editing
+                  Video,Swiming ect. <br /></p
+              ></i>
+
+              <div style="margin-left: 25%; margin-top: 20px">
+                <a href=""
+                  ><i
+                    class="fa-brands fa-youtube"
+                    style="font-size: 2rem; color: rgba(248, 61, 61, 0.877)"
+                  ></i
+                ></a>
+                <a href=""
+                  ><i
+                    class="fa-brands fa-facebook"
+                    style="font-size: 2rem; color: #3b5998; margin-left: 15px"
+                  ></i
+                ></a>
+                <a href="https://github.com/AFLAHAFI"
+                  ><i
+                    class="fa-brands fa-github"
+                    style="
+                      font-size: 2rem;
+                      color: rgba(255, 255, 255, 0.877);
+                      margin-left: 15px;
+                    "
+                  ></i
+                ></a>
               </div>
             </div>
-            
           </div>
+        </div>
 
-          <div class="col-md-4">
-            <div class="cardedu">
-              <img src="photo/web.webp" alt=""  style="height: 374px; width: 480px;">
-                   <div class="cardedu__content">
-                     <p class="cardedu__title">Web Development</p>
-                     <p class="cardedu__description">I have experti in development <br> using  HTML, CSS, and Boostrap. <br>
-                      Web design encompasses the creation <br> and arrangement of visual elements, layout, <br> and user interface to build engaging  <br>and functional websites. </p>
-                   </div>
-                 </div>
-          </div>
+        <div class="col-md-4"  data-aos="fade-right">
+          <div class="card">
+            <h4>My Works</h4>
 
-          <div class=" col-md-4">
-            <div class="form-container">
-              <form class="form">
-                <div class="form-group">
-                  <label for="email"> Email</label>
-                  <input required="" name="email" id="email" type="text">
-                </div>
-                <div class="form-group">
-                  <label for="textarea">Massege</label>
-                  <textarea required="" cols="50" rows="10" id="textarea" name="textarea">          </textarea>
-                </div>
-                <button type="submit" class="form-submit-btn">Submit</button>
-              </form>
-            </div>
+            <button class="buttonmy">Comming!</button>
+
+            <button class="buttonmy">Comming!</button>
+
+            <button class="buttonmy">Comming!</button>
           </div>
         </div>
       </div>
+    </div>
 
-      <footer class="box bg-dark text-light text-center"  >
-        <div class="container py-4">
-            <div class="row">
-                <div class="col-md-6">
-                    <p> <i class="fas fa-envelope"  style="margin-right: 10px; margin-top:60px;"></i>aflahmanningal.afi@gmail.com    <i class="fas fa-location-dot" style="margin-right:20px;margin-left: 106px;"></i>malappuram,Kerala</p>
-                    
-                </div>
-                
+    <div
+      id="education"
+      class="container-fluid overflow-hidden"
+      style="background-color: rgba(130, 182, 61, 0.747)"
+    >
+      <div class="row">
+        <div class="col-md-4"  data-aos="fade-right">
+          <div class="cardedu">
+            <img
+              src="photo/huda.webp"
+              alt=""
+              style="height: 374px; width: 480px"
+            />
+            <div class="cardedu__content">
+              <p class="cardedu__title">Najumul Huda</p>
+              <p class="cardedu__description">
+                Prinsipal-Muhammed shafi <br />
+                lKG to +2 <br />
+                Village-Kottakal <br />
+                Municipality-Kottakal <br />
+                Thaluk-Tirur <br />
+                District-Malapuram
+              </p>
             </div>
+          </div>
         </div>
-    </footer>
-   
 
-    <!-- Content Goes Here -->
+        <div class="col-md-4"  data-aos="fade-right">
+          <div class="cardedu">
+            <img
+              src="photo/web.webp"
+              alt=""
+              style="height: 374px; width: 480px"
+            />
+            <div class="cardedu__content">
+              <p class="cardedu__title">Web Development</p>
+              <p class="cardedu__description">
+                I have experti in development <br />
+                using HTML, CSS, and Boostrap. <br />
+                Web design encompasses the creation <br />
+                and arrangement of visual elements, layout, <br />
+                and user interface to build engaging <br />and functional
+                websites.
+              </p>
+            </div>
+          </div>
+        </div>
 
-    <!-- Bootstrap JS (Optional) -->
+        <div class="col-md-4"  data-aos="fade-right">
+          <div class="form-container">
+            <form class="form">
+              <div class="form-group">
+                <label for="email"> Email</label>
+                <input required="" name="email" id="email" type="text" />
+              </div>
+              <div class="form-group">
+                <label for="textarea">Massege</label>
+                <textarea
+                  required=""
+                  cols="50"
+                  rows="10"
+                  id="textarea"
+                  name="textarea"
+                >
+                </textarea>
+              </div>
+              <button type="submit" class="form-submit-btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overflow-hidden">
+      <footer class="box bg-dark text-light text-center">
+        <div class="container py-4">
+          <div class="row">
+            <div class="col-md-6">
+              <p>
+                <i
+                  class="fas fa-envelope"
+                  style="margin-right: 10px; margin-top: 60px"
+                ></i
+                >aflahmanningal.afi@gmail.com
+                <i
+                  class="fas fa-location-dot"
+                  style="margin-right: 20px; margin-left: 106px"
+                ></i
+                >malappuram,Kerala
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
