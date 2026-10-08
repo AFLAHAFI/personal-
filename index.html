@@ -1,309 +1,636 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0c1416" />
+    <title>Aflah — Student Developer & Robotics Builder</title>
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="description"
+      content="Aflah is a Grade 9 student at AKM HSS Kottoor, Kerala, building robotics projects, web applications, simulation games and educational technology."
     />
-    <title>AFLAH</title>
-    <link rel="icon" type="image/png" href="photo/icon.png"/>
-
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    <link rel="canonical" href="https://aflahafi.github.io/personal-/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Aflah — Ideas into things that work." />
+    <meta
+      property="og:description"
+      content="Student developer, robotics builder and AI & technology creator from Kerala. Explore HerbiQ, Kerala Routes and more."
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    <meta property="og:url" content="https://aflahafi.github.io/personal-/" />
+    <meta
+      property="og:image"
+      content="https://aflahafi.github.io/personal-/assets/social-card.jpg"
     />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Aflah, student developer and robotics builder from Kerala"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="style.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <!-- Navbar -->
-    <nav
-      class="navbar navbar-expand-lg navbar-dark"
-      style="
-        position: fixed;
-        z-index: 2;
-        background-color: rgba(78, 27, 27, 0.822);
-        width: 100%;
-      "
-    >
-      <a class="navbar-brand" href="#">AFLAH</a>
-
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#bioaa">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#education">Education</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <div
-      class="container-fluid overflow-hidden"
-      style="background-color: rgba(180, 252, 86, 0.747)"
-    >
-      <div class="row">
-        <div class="col-md-6">
-          <div class="wlw p-2">
-            <h1 class="">
-              Hi.. <br />
-              I Am Aflah
-            </h1>
-            <p class="text-dark">
-              Discover my skills and expertise in web development.
-            </p>
-            <i class="fa-brands fa-github" style="font-size: 2rem"></i>
-            <i
-              class="fa-brands fa-html5"
-              style="font-size: 2rem; margin-left: 20px; color: red"
-            ></i>
-            <i
-              class="fa-regular fa-file-code"
-              style="
-                font-size: 2rem;
-                margin-left: 20px;
-                color: rgba(20, 170, 170, 0.808);
-              "
-            ></i>
-            <i
-              class="fa-brands fa-java"
-              style="font-size: 2rem; margin-left: 20px; color: forestgreen"
-            ></i>
-            <i
-              class="fa-brands fa-bootstrap"
-              style="
-                font-size: 2rem;
-                margin-left: 20px;
-                color: rgb(122, 9, 122);
-              "
-            ></i>
-          </div>
-        </div>
-
-        <div class="col-md-6"
-        data-aos="fade-right">
-          <div class="card">
-            <img src="photo/aflah1.webp" class="rounded" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div
-      id="bioaa"
-      class="container-fluid overflow-hidden"
-      style="background-color: rgba(154, 216, 73, 0.747)"
-    >
-      <div class="row">
-        <div class="col-md-4" data-aos="fade-right">
-          <div class="card">
-            <img src="photo/aflah2.webp" class="rounded" alt="" />
-          </div>
-        </div>
-
-        <div class="col-md-4" data-aos="fade-right">
-          <div
-            class="notification"
-            style="
-              height: 454px;
-              width: 361px;
-              margin-top: 80px;
-              margin-left: -5px;
-            "
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav wrap" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Aflah home"
+          >a<span>.</span><span class="brand-name">AFLAH</span></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="nav-links"
+          aria-expanded="false"
+          hidden
+        >
+          <span>Menu</span><span class="menu-icon" aria-hidden="true"></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="#home">Home</a><a href="#about">About</a
+          ><a href="#projects">Projects</a><a href="#skills">Skills</a
+          ><a href="#achievements">Achievements</a><a href="#journey">Journey</a
+          ><a href="#contact">Contact</a>
+          <a class="nav-github" href="https://github.com/AFLAHAFI"
+            >GitHub <span aria-hidden="true">↗</span></a
           >
-            <div class="notiglow"></div>
-            <div class="notiborderglow"></div>
-            <div class="notititle text-center" style="font-size: 50px">
-              <h1>BIO</h1>
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero wrap" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="status-dot"></span> A STUDENT. A BUILDER. ALWAYS
+            LEARNING.
+          </div>
+          <p class="hello">Hi, I'm</p>
+          <h1 id="hero-title">Aflah<span>.</span></h1>
+          <p class="hero-role">
+            Student Developer <span>·</span> Robotics Builder<br />AI &
+            Technology Creator
+          </p>
+          <p class="hero-description">
+            Turning curiosity into things that work.<br />I build robotics
+            projects, interactive websites, simulation games and educational
+            tools.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects"
+              >View my projects <span aria-hidden="true">↗</span></a
+            ><a class="button secondary" href="https://github.com/AFLAHAFI"
+              >GitHub <span aria-hidden="true">↗</span></a
+            ><a class="text-link" href="#about"
+              >About me <span aria-hidden="true">↓</span></a
+            >
+          </div>
+          <div class="hero-meta">
+            <span
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 0 1 14 0Z" />
+                <circle cx="12" cy="10" r="2.5" /></svg
+              >Kerala, India</span
+            ><span>Grade 9 · AKM HSS Kottoor</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="portrait-label">
+            <span>THE PERSON BEHIND THE PROJECTS</span
+            ><span aria-hidden="true">↘</span>
+          </div>
+          <div class="portrait-frame">
+            <picture
+              ><source
+                type="image/webp"
+                srcset="
+                  assets/aflah-portrait-480.webp 480w,
+                  assets/aflah-portrait-900.webp 900w
+                "
+                sizes="(max-width: 760px) 90vw, 430px" />
+              <img
+                src="assets/aflah-portrait.jpg"
+                width="900"
+                height="1200"
+                alt="Aflah outdoors wearing a black shirt"
+                fetchpriority="high"
+            /></picture>
+            <div class="portrait-caption">
+              <span class="status-dot"></span> Learning by building.<span
+                class="caption-code"
+                aria-hidden="true"
+                >&lt;/&gt;</span
+              >
             </div>
-
-            <div class="notibody">
-              <i class="">
-                <p>
-                  <strong>Personal Information:</strong> Aflah,Male <br />
-
-                  <strong>Objective:</strong>Seeking a position as a web
-                  developer <br />
-                  to utilize my skills in development, creating dynamic <br />
-                  and visually appealing websites that deliver an <br />
-                  exceptional user experience. <br />
-
-                  <strong>Education:</strong>6th standerd,Najumul huda hirher
-                  secondary school. <br />
-
-                  <strong>Skills:</strong>HTML,CSS,BOOSTRAP <br />
-
-                  <strong>Achievements:</strong>Agarbatti making,Web pages
-                  making,Cooking <br />
-
-                  <strong>Interests:</strong>Cycling,Drawing, Editing
-                  Video,Swiming ect. <br /></p
-              ></i>
-
-              <div style="margin-left: 25%; margin-top: 20px">
-                <a href=""
-                  ><i
-                    class="fa-brands fa-youtube"
-                    style="font-size: 2rem; color: rgba(248, 61, 61, 0.877)"
-                  ></i
-                ></a>
-                <a href=""
-                  ><i
-                    class="fa-brands fa-facebook"
-                    style="font-size: 2rem; color: #3b5998; margin-left: 15px"
-                  ></i
-                ></a>
-                <a href="https://github.com/AFLAHAFI"
-                  ><i
-                    class="fa-brands fa-github"
-                    style="
-                      font-size: 2rem;
-                      color: rgba(255, 255, 255, 0.877);
-                      margin-left: 15px;
-                    "
-                  ></i
-                ></a>
-              </div>
+          </div>
+          <div class="build-note">
+            <span class="note-icon" aria-hidden="true">⌘</span>
+            <div>
+              <span class="micro">HARDWARE MEETS SOFTWARE</span>
+              <p>One idea. Many ways to build it.</p>
             </div>
           </div>
         </div>
-
-        <div class="col-md-4"  data-aos="fade-right">
-          <div class="card">
-            <h4>My Works</h4>
-
-            <button class="buttonmy">Comming!</button>
-
-            <button class="buttonmy">Comming!</button>
-
-            <button class="buttonmy">Comming!</button>
-          </div>
+        <a class="scroll-cue" href="#projects"
+          ><span aria-hidden="true">↓</span> A selection of what I'm building</a
+        >
+      </section>
+      <div class="discipline-strip" aria-label="Areas of interest">
+        <div class="wrap">
+          <span>Robotics</span><i aria-hidden="true">✳</i
+          ><span>Web development</span><i aria-hidden="true">✳</i
+          ><span>Artificial intelligence</span><i aria-hidden="true">✳</i
+          ><span>Creative technology</span>
         </div>
       </div>
-    </div>
-
-    <div
-      id="education"
-      class="container-fluid overflow-hidden"
-      style="background-color: rgba(130, 182, 61, 0.747)"
-    >
-      <div class="row">
-        <div class="col-md-4"  data-aos="fade-right">
-          <div class="cardedu">
-            <img
-              src="photo/huda.webp"
-              alt=""
-              style="height: 374px; width: 480px"
-            />
-            <div class="cardedu__content">
-              <p class="cardedu__title">Najumul Huda</p>
-              <p class="cardedu__description">
-                Prinsipal-Muhammed shafi <br />
-                lKG to +2 <br />
-                Village-Kottakal <br />
-                Municipality-Kottakal <br />
-                Thaluk-Tirur <br />
-                District-Malapuram
-              </p>
-            </div>
+      <section
+        class="section wrap"
+        id="projects"
+        aria-labelledby="projects-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 / SELECTED WORK</p>
+            <h2 id="projects-title">Ideas, brought to life<span>.</span></h2>
           </div>
+          <p>
+            From a garden guide robot to shared virtual worlds.<br />Every
+            project is a chance to learn something new.
+          </p>
         </div>
-
-        <div class="col-md-4"  data-aos="fade-right">
-          <div class="cardedu">
-            <img
-              src="photo/web.webp"
-              alt=""
-              style="height: 374px; width: 480px"
-            />
-            <div class="cardedu__content">
-              <p class="cardedu__title">Web Development</p>
-              <p class="cardedu__description">
-                I have experti in development <br />
-                using HTML, CSS, and Boostrap. <br />
-                Web design encompasses the creation <br />
-                and arrangement of visual elements, layout, <br />
-                and user interface to build engaging <br />and functional
-                websites.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4"  data-aos="fade-right">
-          <div class="form-container">
-            <form class="form">
-              <div class="form-group">
-                <label for="email"> Email</label>
-                <input required="" name="email" id="email" type="text" />
+        <div class="featured-grid">
+          <article class="project-card featured reveal">
+            <div class="project-visual herbiq-visual">
+              <div class="visual-top">
+                <span>HERBIQ / ROBOTICS</span><span>CONCEPT STUDY</span>
               </div>
-              <div class="form-group">
-                <label for="textarea">Massege</label>
-                <textarea
-                  required=""
-                  cols="50"
-                  rows="10"
-                  id="textarea"
-                  name="textarea"
-                >
-                </textarea>
+              <img
+                src="assets/herbiq.svg"
+                width="600"
+                height="320"
+                alt="Concept illustration of a guide robot with a plant information display"
+                loading="lazy"
+              />
+              <div class="visual-bottom">
+                <span class="status-dot"></span> Technology rooted in nature
               </div>
-              <button type="submit" class="form-submit-btn">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="overflow-hidden">
-      <footer class="box bg-dark text-light text-center">
-        <div class="container py-4">
-          <div class="row">
-            <div class="col-md-6">
+            </div>
+            <div class="project-body">
+              <div class="project-kicker">
+                01 <span>ROBOTICS × EDUCATION</span>
+              </div>
+              <h3>HerbiQ</h3>
+              <p class="project-subtitle">Ayurvedic Heritage Guide Robot</p>
               <p>
-                <i
-                  class="fas fa-envelope"
-                  style="margin-right: 10px; margin-top: 60px"
-                ></i
-                >aflahmanningal.afi@gmail.com
-                <i
-                  class="fas fa-location-dot"
-                  style="margin-right: 20px; margin-left: 106px"
-                ></i
-                >malappuram,Kerala
+                A smart guide for Ayurvedic gardens and botanical spaces,
+                combining plant recognition, multilingual interaction,
+                navigation and touchscreen learning.
               </p>
+              <ul class="tags" aria-label="HerbiQ technologies">
+                <li>Raspberry Pi</li>
+                <li>ESP32</li>
+                <li>Computer Vision</li>
+                <li>Sensors</li>
+              </ul>
+              <details>
+                <summary>
+                  Project details <span aria-hidden="true">+</span>
+                </summary>
+                <div class="detail-content">
+                  Developed as part of WRO India 2026 project work. HerbiQ
+                  brings hardware, AI and an educational touchscreen interface
+                  together for gardens, museums and schools. The project
+                  explores plant recognition, multilingual guidance and
+                  sensor-based navigation.
+                </div>
+              </details>
+            </div>
+          </article>
+          <article class="project-card featured reveal">
+            <div class="project-visual routes-visual">
+              <div class="visual-top">
+                <span>KERALA ROUTES / MULTIPLAYER</span><span>WORLD STUDY</span>
+              </div>
+              <img
+                src="assets/routes.svg"
+                width="600"
+                height="320"
+                alt="Illustrated Kerala Routes road network with a bus and Kozhikode landmarks"
+                loading="lazy"
+              />
+              <div class="visual-bottom">
+                <span class="status-dot"></span> A shared world, inspired by
+                home
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-kicker">
+                02 <span>GAMES × EXPLORATION</span>
+              </div>
+              <h3>Kerala Routes</h3>
+              <p class="project-subtitle">A multiplayer world on the move</p>
+              <p>
+                A browser-based Kerala bus driving and exploration game with
+                real-player drivers and passengers, routes, missions and
+                progression.
+              </p>
+              <ul class="tags" aria-label="Kerala Routes technologies">
+                <li>Babylon.js</li>
+                <li>TypeScript</li>
+                <li>Socket.IO</li>
+                <li>Node.js</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://aflahafi.github.io/kerala-routes/"
+                  >Explore the game <span aria-hidden="true">↗</span></a
+                ><a href="https://github.com/AFLAHAFI/kerala-routes"
+                  >GitHub <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="project-grid">
+          <article class="project-card compact reveal">
+            <div class="small-card-top">
+              <span class="project-icon" aria-hidden="true">⌘</span
+              ><span class="micro">WEB APPLICATION</span>
+            </div>
+            <h3>HerbiQ Visitor Website</h3>
+            <p>
+              A digital companion for medicinal plant exploration, QR-based
+              discovery, AR-ready viewing and structured plant information.
+            </p>
+            <ul class="tags">
+              <li>React</li>
+              <li>Vite</li>
+              <li>Tailwind</li>
+            </ul>
+            <a class="card-link" href="https://github.com/AFLAHAFI/herbiq_site"
+              >View on GitHub <span aria-hidden="true">↗</span></a
+            >
+          </article>
+          <article class="project-card compact reveal">
+            <div class="small-card-top">
+              <span class="project-icon" aria-hidden="true">↗</span
+              ><span class="micro">SIMULATION PROJECT</span>
+            </div>
+            <h3>Kerala Sky Runner</h3>
+            <p>
+              An aircraft simulation and travel game concept with pilot and
+              passenger modes, flight physics and a Kerala-inspired environment.
+            </p>
+            <ul class="tags">
+              <li>Flight systems</li>
+              <li>Game design</li>
+            </ul>
+            <details>
+              <summary>
+                Project details <span aria-hidden="true">+</span>
+              </summary>
+              <div class="detail-content">
+                An evolving project exploring aircraft controls, airports,
+                guided flight learning and passenger travel in one world.
+                Currently in development.
+              </div>
+            </details>
+          </article>
+          <article class="project-card compact reveal">
+            <div class="small-card-top">
+              <span class="project-icon" aria-hidden="true">▦</span
+              ><span class="micro">PRACTICAL SOFTWARE</span>
+            </div>
+            <h3>Student Software Tools</h3>
+            <p>
+              School tools, dashboards and workflow applications that make
+              everyday tasks easier to manage.
+            </p>
+            <ul class="tags">
+              <li>Google Apps Script</li>
+              <li>JavaScript</li>
+            </ul>
+            <details>
+              <summary>
+                What I'm building <span aria-hidden="true">+</span>
+              </summary>
+              <div class="detail-content">
+                Attendance and inventory tools, admission workflows and task
+                management dashboards. These internal applications are presented
+                here without private records or access links.
+              </div>
+            </details>
+          </article>
+          <article class="project-card compact reveal">
+            <div class="small-card-top">
+              <span class="project-icon" aria-hidden="true">✳</span
+              ><span class="micro">EXPERIMENTS</span>
+            </div>
+            <h3>Creative Technology</h3>
+            <p>
+              Small experiments in educational games, motion graphics and
+              creative coding. A space to try things and keep learning.
+            </p>
+            <ul class="tags">
+              <li>HTML & CSS</li>
+              <li>SVG</li>
+              <li>Creative coding</li>
+            </ul>
+            <details>
+              <summary>
+                Explore the ideas <span aria-hidden="true">+</span>
+              </summary>
+              <div class="detail-content">
+                Browser-based maths activities, animated SVG visuals and
+                interactive web experiments, combining design with code.
+              </div>
+            </details>
+          </article>
+        </div>
+      </section>
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <div class="section wrap about-grid">
+          <div class="about-photo reveal">
+            <picture
+              ><source
+                type="image/webp"
+                srcset="
+                  assets/aflah-about-480.webp 480w,
+                  assets/aflah-about-900.webp 900w
+                "
+                sizes="(max-width: 760px) 85vw, 340px" />
+              <img
+                src="assets/aflah-about.jpg"
+                width="896"
+                height="1195"
+                alt="Aflah smiling beside a stone wall"
+                loading="lazy"
+            /></picture>
+            <div class="photo-footnote">
+              <span>A LITTLE ABOUT ME</span><span aria-hidden="true">↗</span>
+            </div>
+          </div>
+          <div class="about-copy">
+            <p class="eyebrow">02 / BEHIND THE BUILDS</p>
+            <h2 id="about-title">
+              Curiosity first.<br />Build, learn, repeat<span>.</span>
+            </h2>
+            <p class="lead">
+              I'm a Grade 9 student at AKM HSS Kottoor in Kerala. I learn best
+              when I have something to build.
+            </p>
+            <p>
+              I enjoy connecting hardware and software: giving a robot a useful
+              role, making a website easier to use or bringing a simulation to
+              life. Robotics, AI and electronics give me plenty of questions to
+              explore.
+            </p>
+            <p>
+              Through school projects and technology competitions, I'm learning
+              to test ideas, work through problems and improve what I make.
+              There's always a next version.
+            </p>
+            <div class="about-values">
+              <div>
+                <span aria-hidden="true">01</span
+                ><strong>Learn by doing</strong>
+              </div>
+              <div>
+                <span aria-hidden="true">02</span
+                ><strong>Build for a purpose</strong>
+              </div>
+              <div>
+                <span aria-hidden="true">03</span
+                ><strong>Keep improving</strong>
+              </div>
             </div>
           </div>
         </div>
-      </footer>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+      </section>
+      <section class="section wrap" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">03 / MY TOOLKIT</p>
+            <h2 id="skills-title">
+              Tools I use. Ideas I explore<span>.</span>
+            </h2>
+          </div>
+          <p>
+            A growing toolkit, shaped by hands-on projects.<br />Still learning,
+            with every build.
+          </p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <span class="skill-number" aria-hidden="true">&lt;/&gt;</span>
+            <p class="micro">BUILDING WITH</p>
+            <h3>Web Development</h3>
+            <p>
+              HTML · CSS · JavaScript<br />Responsive design · Tailwind ·
+              Bootstrap
+            </p>
+            <span class="learning-note">Learning: React</span>
+          </article>
+          <article class="skill-card">
+            <span class="skill-number" aria-hidden="true">⚙</span>
+            <p class="micro">BUILDING WITH</p>
+            <h3>Robotics & Electronics</h3>
+            <p>Raspberry Pi · ESP32 · Sensors<br />Robotics prototyping</p>
+            <span class="learning-note">Exploring: embedded systems</span>
+          </article>
+          <article class="skill-card">
+            <span class="skill-number" aria-hidden="true">✳</span>
+            <p class="micro">LEARNING & EXPLORING</p>
+            <h3>AI & Computer Vision</h3>
+            <p>
+              AI-assisted development · AI tools<br />Plant recognition concepts
+            </p>
+            <span class="learning-note">Exploring: computer vision</span>
+          </article>
+          <article class="skill-card">
+            <span class="skill-number" aria-hidden="true">⌘</span>
+            <p class="micro">BUILDING WITH</p>
+            <h3>Software & Development</h3>
+            <p>
+              Git · GitHub · Google Apps Script<br />Application prototyping
+            </p>
+            <span class="learning-note">Learning: API integration</span>
+          </article>
+          <article class="skill-card">
+            <span class="skill-number" aria-hidden="true">◈</span>
+            <p class="micro">PRACTISING</p>
+            <h3>Creative Technology</h3>
+            <p>
+              UI design · Video editing<br />Creative coding · Digital content
+            </p>
+            <span class="learning-note"
+              >Exploring: interactive experiences</span
+            >
+          </article>
+          <div class="toolkit-note">
+            <span aria-hidden="true">↗</span>
+            <p>
+              The best way to<br />learn a new tool?<br /><strong
+                >Make something with it.</strong
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="section wrap achievements-section"
+        id="achievements"
+        aria-labelledby="achievements-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">04 / MILESTONES</p>
+            <h2 id="achievements-title">
+              Small steps. Real progress<span>.</span>
+            </h2>
+          </div>
+          <p>Learning beyond the classroom.</p>
+        </div>
+        <div class="milestones">
+          <article>
+            <span class="milestone-icon" aria-hidden="true">✧</span>
+            <div>
+              <p class="micro">ACADEMIC</p>
+              <h3>NMMS Selection</h3>
+              <p>A milestone in my school learning journey.</p>
+            </div>
+          </article>
+          <article>
+            <span class="milestone-icon" aria-hidden="true">⌘</span>
+            <div>
+              <p class="micro">ROBOTICS PROJECT</p>
+              <h3>WRO India 2026 Work</h3>
+              <p>Developing HerbiQ as part of a robotics team project.</p>
+            </div>
+          </article>
+          <article>
+            <span class="milestone-icon" aria-hidden="true">↗</span>
+            <div>
+              <p class="micro">HANDS-ON LEARNING</p>
+              <h3>School Technology Projects</h3>
+              <p>Turning classroom interests into practical digital tools.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section
+        class="journey-section"
+        id="journey"
+        aria-labelledby="journey-title"
+      >
+        <div class="section wrap journey-grid">
+          <div>
+            <p class="eyebrow">05 / THE JOURNEY SO FAR</p>
+            <h2 id="journey-title">
+              One project leads<br />to the next<span>.</span>
+            </h2>
+            <p>
+              It started with the web.<br />Now the ideas reach beyond the
+              screen.
+            </p>
+          </div>
+          <ol class="timeline">
+            <li>
+              <span class="timeline-step">01</span>
+              <div>
+                <h3>First lines of code</h3>
+                <p>Exploring HTML and CSS, and building my first websites.</p>
+              </div>
+            </li>
+            <li>
+              <span class="timeline-step">02</span>
+              <div>
+                <h3>Beyond the screen</h3>
+                <p>Experimenting with electronics, sensors and robotics.</p>
+              </div>
+            </li>
+            <li>
+              <span class="timeline-step">03</span>
+              <div>
+                <h3>Building with purpose</h3>
+                <p>
+                  Developing HerbiQ and tools for learning and everyday
+                  workflows.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="timeline-step">04</span>
+              <div>
+                <h3>Creating interactive worlds</h3>
+                <p>
+                  Exploring multiplayer systems and simulation through Kerala
+                  Routes and Kerala Sky Runner.
+                </p>
+              </div>
+            </li>
+            <li class="current">
+              <span class="timeline-step">↗</span>
+              <div>
+                <span class="micro">RIGHT NOW</span>
+                <h3>Connecting the pieces</h3>
+                <p>
+                  Learning more about AI, robotics and thoughtful digital
+                  products.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section class="section wrap exploring" aria-labelledby="exploring-title">
+        <p class="eyebrow">THE NEXT CHAPTER</p>
+        <h2 id="exploring-title">Currently exploring<span>.</span></h2>
+        <ul class="interest-tags">
+          <li>Robotics</li>
+          <li>Artificial Intelligence</li>
+          <li>Embedded Systems</li>
+          <li>Game Development</li>
+          <li>Web Applications</li>
+          <li>Computer Vision</li>
+          <li>Educational Technology</li>
+        </ul>
+      </section>
+      <section class="wrap github-section" aria-labelledby="github-title">
+        <div class="github-mark" aria-hidden="true">{ }</div>
+        <div>
+          <p class="eyebrow">OPEN PROJECTS. ONGOING LEARNING.</p>
+          <h2 id="github-title">See what I'm building.</h2>
+          <p>Explore my code, experiments and the next versions on GitHub.</p>
+        </div>
+        <a class="button secondary" href="https://github.com/AFLAHAFI"
+          >Explore GitHub <span aria-hidden="true">↗</span></a
+        >
+      </section>
+      <section
+        class="section wrap contact-section"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <p class="eyebrow">06 / LET'S CONNECT</p>
+        <h2 id="contact-title">
+          Good things start<br />with a little <em>curiosity.</em>
+        </h2>
+        <p>
+          Interested in a project, a learning opportunity or building something
+          together?<br />Find my public work and profile on GitHub.
+        </p>
+        <a class="button primary" href="https://github.com/AFLAHAFI"
+          >Find me on GitHub <span aria-hidden="true">↗</span></a
+        ><span class="contact-location">Kerala, India</span>
+      </section>
+    </main>
+    <footer class="wrap footer">
+      <a class="brand" href="#home" aria-label="Back to top">a<span>.</span></a>
+      <p>Designed & built by Aflah <span>© 2026</span></p>
+      <a href="https://github.com/AFLAHAFI"
+        >GitHub <span aria-hidden="true">↗</span></a
+      ><a href="#home">Back to top <span aria-hidden="true">↑</span></a>
+    </footer>
   </body>
 </html>
