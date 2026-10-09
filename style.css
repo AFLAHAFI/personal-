@@ -1368,6 +1368,47 @@ details[open] summary span {
     min-width: 65%;
   }
 }
+/* Small contact and motion additions; the existing layout is preserved. */
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+.contact-email {
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  padding-block: 12px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--mint);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero-copy { animation: hero-enter .7s ease-out both; }
+  .hero-visual { animation: hero-enter .85s .1s ease-out both; }
+  .button span, .card-link span, .project-links a span {
+    display: inline-block;
+    transition: transform .22s ease;
+  }
+  .button:hover span, .button:focus-visible span,
+  .card-link:hover span, .card-link:focus-visible span,
+  .project-links a:hover span, .project-links a:focus-visible span {
+    transform: translate(2px, -2px);
+  }
+  .skill-card, .interest-tags li {
+    transition: transform .25s ease, border-color .25s ease;
+  }
+  .skill-card:hover, .interest-tags li:hover {
+    transform: translateY(-3px);
+    border-color: var(--teal);
+  }
+}
+@keyframes hero-enter {
+  from { opacity: .3; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

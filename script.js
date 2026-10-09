@@ -80,7 +80,10 @@ if ("IntersectionObserver" in window) {
       { threshold: 0.08 },
     );
     document
-      .querySelectorAll(".reveal")
-      .forEach((element) => revealObserver.observe(element));
+      .querySelectorAll(".reveal, .skill-card, .milestones article, .timeline li, .github-section")
+      .forEach((element) => {
+        element.classList.add("reveal");
+        revealObserver.observe(element);
+      });
   }
 }
