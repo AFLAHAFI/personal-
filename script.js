@@ -67,23 +67,39 @@ if ("IntersectionObserver" in window) {
     const section = document.querySelector(anchor.hash);
     if (section) sectionObserver.observe(section);
   });
-  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    const revealObserver = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.08 },
-    );
-    document
-      .querySelectorAll(".reveal, .skill-card, .milestones article, .timeline li, .github-section")
-      .forEach((element) => {
-        element.classList.add("reveal");
-        revealObserver.observe(element);
-      });
+  const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const revealTargets = document.querySelectorAll(
+    ".section-heading, .project-card, .about-photo, .about-copy, .skill-card, .milestones article, .journey-grid > div, .timeline li, .exploring, .github-section, .contact-section"
+  );
+  // Only enhance after an observer exists; the page remains visible without JS.
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+      } else if (entry.boundingClientRect.bottom <= 0 ||
+                 entry.boundingClientRect.top >= window.innerHeight) {
+        // Replay on the next visit, but never hide a partially visible section.
+        entry.target.classList.remove("is-visible");
+      }
+    });
+  }, { threshold: 0, rootMargin: "0px" });
+  function configureScrollMotion() {
+    revealObserver.disconnect();
+    revealTargets.forEach((element) => {
+      element.classList.remove("reveal", "visible", "scroll-reveal", "is-visible");
+      if (motionPreference.matches) return;
+      const siblings = [...element.parentElement.children];
+      const isCardGroup = element.matches(".project-card, .skill-card, .milestones article");
+      element.style.setProperty("--reveal-delay", isCardGroup ? `${siblings.indexOf(element) % 3 * 80}ms` : "0ms");
+      // Preserve anything already on screen when loading or restoring a page.
+      const bounds = element.getBoundingClientRect();
+      if (bounds.top < window.innerHeight && bounds.bottom > 0) {
+        element.classList.add("is-visible");
+      }
+      element.classList.add("scroll-reveal");
+      revealObserver.observe(element);
+    });
   }
+  configureScrollMotion();
+  motionPreference.addEventListener("change", configureScrollMotion);
 }
