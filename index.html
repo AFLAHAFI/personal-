@@ -29,8 +29,11 @@
     />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="style.css?v=20261009-motion2" />
-    <script src="script.js?v=20261009-motion2" defer></script>
+    <script src="theme.js?v=20261011-portfolio"></script>
+    <link rel="stylesheet" href="style.css?v=20261011-portfolio" />
+    <link rel="stylesheet" href="features.css?v=20261011-portfolio" />
+    <script src="script.js?v=20261011-portfolio" defer></script>
+    <script src="features.js?v=20261011-portfolio" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -39,6 +42,10 @@
         <a class="brand" href="#home" aria-label="Aflah home"
           >a<span>.</span><span class="brand-name">AFLAH</span></a
         >
+        <div class="nav-tools" hidden>
+          <button class="utility-button command-trigger" type="button" aria-label="Search projects and sections">Search <kbd>⌘ K</kbd></button>
+          <button class="utility-button theme-toggle" type="button" aria-label="Switch to light theme">☀ <span>Light</span></button>
+        </div>
         <button
           class="menu-toggle"
           type="button"
@@ -159,8 +166,17 @@
             project is a chance to learn something new.
           </p>
         </div>
-        <div class="featured-grid">
-          <article class="project-card featured reveal">
+        <div class="project-toolbar" hidden>
+          <div class="filter-buttons" role="group" aria-label="Filter projects">
+            <button type="button" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" data-filter="robotics" aria-pressed="false">Robotics</button>
+            <button type="button" data-filter="web" aria-pressed="false">Web Apps</button>
+            <button type="button" data-filter="games" aria-pressed="false">Games</button>
+            <button type="button" data-filter="creative" aria-pressed="false">Creative Coding</button>
+          </div>
+          <p class="result-count" role="status" aria-live="polite">6 projects</p>
+        </div>
+        <div class="project-catalog"><article data-category="robotics" class="project-card featured reveal">
             <div class="project-visual herbiq-visual">
               <div class="visual-top">
                 <span>HERBIQ / ROBOTICS</span><span>CONCEPT STUDY</span>
@@ -184,7 +200,7 @@
               <p class="project-subtitle">Ayurvedic Heritage Guide Robot</p>
               <p>
                 A smart guide for Ayurvedic gardens and botanical spaces,
-                combining plant recognition, multilingual interaction,
+                combining ArUco plant identification, multilingual interaction,
                 navigation and touchscreen learning.
               </p>
               <ul class="tags" aria-label="HerbiQ technologies">
@@ -193,21 +209,10 @@
                 <li>Computer Vision</li>
                 <li>Sensors</li>
               </ul>
-              <details>
-                <summary>
-                  Project details <span aria-hidden="true">+</span>
-                </summary>
-                <div class="detail-content">
-                  Developed as part of WRO India 2026 project work. HerbiQ
-                  brings hardware, AI and an educational touchscreen interface
-                  together for gardens, museums and schools. The project
-                  explores plant recognition, multilingual guidance and
-                  sensor-based navigation.
-                </div>
-              </details>
+              <a class="card-link" href="projects/herbiq.html">Read the case study <span aria-hidden="true">↗</span></a>
             </div>
           </article>
-          <article class="project-card featured reveal">
+<article data-category="games" class="project-card featured reveal">
             <div class="project-visual routes-visual">
               <div class="visual-top">
                 <span>KERALA ROUTES / MULTIPLAYER</span><span>WORLD STUDY</span>
@@ -241,7 +246,7 @@
                 <li>Socket.IO</li>
                 <li>Node.js</li>
               </ul>
-              <div class="project-links">
+              <a class="case-link" href="projects/kerala-routes.html">Read the case study <span aria-hidden="true">↗</span></a><div class="project-links">
                 <a href="https://aflahafi.github.io/kerala-routes/"
                   >Explore the game <span aria-hidden="true">↗</span></a
                 ><a href="https://github.com/AFLAHAFI/kerala-routes"
@@ -250,9 +255,7 @@
               </div>
             </div>
           </article>
-        </div>
-        <div class="project-grid">
-          <article class="project-card compact reveal">
+<article data-category="web" class="project-card compact reveal">
             <div class="small-card-top">
               <span class="project-icon" aria-hidden="true">⌘</span
               ><span class="micro">WEB APPLICATION</span>
@@ -267,11 +270,11 @@
               <li>Vite</li>
               <li>Tailwind</li>
             </ul>
-            <a class="card-link" href="https://herbiq-site.vercel.app/"
+            <a class="case-link" href="#playground">Try the plant demo <span aria-hidden="true">↓</span></a><a class="card-link" href="https://herbiq-site.vercel.app/"
               >Visit website <span aria-hidden="true">↗</span></a
             >
           </article>
-          <article class="project-card compact reveal">
+<article data-category="games" class="project-card compact reveal">
             <div class="small-card-top">
               <span class="project-icon" aria-hidden="true">↗</span
               ><span class="micro">SIMULATION PROJECT</span>
@@ -285,11 +288,11 @@
               <li>Flight systems</li>
               <li>Game design</li>
             </ul>
-            <a class="card-link" href="https://brainbloom.itch.io/kerala-sky-runner-living-world"
+            <a class="case-link" href="projects/sky-runner.html">Read the case study <span aria-hidden="true">↗</span></a><a class="card-link" href="https://brainbloom.itch.io/kerala-sky-runner-living-world"
               >Play on itch.io <span aria-hidden="true">↗</span></a
             >
           </article>
-          <article class="project-card compact reveal">
+<article data-category="web" class="project-card compact reveal">
             <div class="small-card-top">
               <span class="project-icon" aria-hidden="true">▦</span
               ><span class="micro">PRACTICAL SOFTWARE</span>
@@ -314,7 +317,7 @@
               </div>
             </details>
           </article>
-          <article class="project-card compact reveal">
+<article data-category="creative" class="project-card compact reveal">
             <div class="small-card-top">
               <span class="project-icon" aria-hidden="true">✳</span
               ><span class="micro">EXPERIMENTS</span>
@@ -334,12 +337,29 @@
                 Explore the ideas <span aria-hidden="true">+</span>
               </summary>
               <div class="detail-content">
-                Browser-based maths activities, animated SVG visuals and
-                interactive web experiments, combining design with code.
+                Browser-based maths activities, animated SVG visuals and MotionForge experiments for turning SVG/HTML animations into video, combining design with code.
               </div>
             </details>
-          </article>
+          </article></div>
+      </section>
+      <section class="section wrap playground" id="playground" aria-labelledby="playground-title">
+        <div class="section-heading"><div><p class="eyebrow">BUILDING IN THE OPEN / INTERACTIVE PREVIEW</p><h2 id="playground-title">A little curiosity.<br>A living collection<span>.</span></h2></div><p>A small plant explorer inspired by HerbiQ. Try a name or a plant code, then open a record.</p></div>
+        <div class="demo-shell" hidden>
+          <div class="demo-browser"><span aria-hidden="true">● ● ●</span><span>HerbiQ / Plant Explorer</span><span class="demo-badge">3 example records</span></div>
+          <div class="demo-layout"><div class="plant-search-panel">
+            <label for="plant-search">Find a plant</label><input id="plant-search" type="search" placeholder="Try Tulsi or HERBIQ:neem" autocomplete="off">
+            <p class="demo-hint">Search by name or the code on a plant label.</p>
+            <div id="plant-list" class="plant-list" role="group" aria-label="Example plants"></div>
+            <p id="plant-count" role="status" aria-live="polite"></p>
+            <button type="button" class="demo-reset">Reset explorer</button>
+          </div><article class="plant-detail" aria-labelledby="plant-title">
+            <div class="leaf-art" aria-hidden="true"><svg viewBox="0 0 240 180"><path d="M120 164V65M120 127C63 130 42 91 48 54C102 52 126 84 120 127M120 100C117 52 149 29 197 36C199 82 170 104 120 100"/><path d="M120 127L63 70M120 100L180 49"/></svg></div>
+            <p class="eyebrow" id="plant-type"></p><h3 id="plant-title"></h3><p id="plant-scientific" class="scientific"></p><p id="plant-description"></p>
+            <dl class="plant-facts"><div><dt>Look for</dt><dd id="plant-identification"></dd></div><div><dt>Plant code</dt><dd id="plant-code"></dd></div></dl>
+            <a href="https://herbiq-site.vercel.app/" class="text-link">Open the full HerbiQ website ↗</a>
+          </article></div>
         </div>
+        <noscript><p><a href="https://herbiq-site.vercel.app/">Explore plants on the HerbiQ website ↗</a></p></noscript>
       </section>
       <section class="about-section" id="about" aria-labelledby="about-title">
         <div class="section wrap about-grid">
@@ -381,7 +401,7 @@
             <p>
               Through school projects and technology competitions, I'm learning
               to test ideas, work through problems and improve what I make.
-              There's always a next version.
+              For HerbiQ, I worked with Team Delta Malabar on team coordination, AI integration and plant research. There's always a next version.
             </p>
             <div class="about-values">
               <div>
@@ -497,8 +517,8 @@
             <span class="milestone-icon" aria-hidden="true">⌘</span>
             <div>
               <p class="micro">ROBOTICS PROJECT</p>
-              <h3>WRO India 2026 Work</h3>
-              <p>Developing HerbiQ as part of a robotics team project.</p>
+              <h3>WRO India 2026 · Silver Badge</h3>
+              <p>Team Delta Malabar’s HerbiQ project, National Level, Hyderabad.</p>
             </div>
           </article>
           <article>

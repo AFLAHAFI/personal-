@@ -21,7 +21,7 @@ if (menu && links) {
     closeMenu();
     // Keep keyboard focus in the selected section after the mobile menu closes.
     if (
-      window.matchMedia("(max-width: 760px)").matches &&
+      window.matchMedia("(max-width: 1100px)").matches &&
       anchor.hash &&
       anchor.origin === location.origin
     ) {
@@ -45,7 +45,7 @@ if (menu && links) {
     if (!event.target.closest(".site-header")) closeMenu();
   });
   window
-    .matchMedia("(max-width: 760px)")
+    .matchMedia("(max-width: 1100px)")
     .addEventListener("change", () => closeMenu());
 }
 if ("IntersectionObserver" in window) {
@@ -69,7 +69,7 @@ if ("IntersectionObserver" in window) {
   });
   const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
   const revealTargets = document.querySelectorAll(
-    ".section-heading, .project-card, .about-photo, .about-copy, .skill-card, .milestones article, .journey-grid > div, .timeline li, .exploring, .github-section, .contact-section"
+    ".section-heading, .project-card, .about-photo, .about-copy, .skill-card, .milestones article, .journey-grid > div, .timeline li, .exploring, .github-section, .contact-section, .case-body section, .demo-shell"
   );
   // Only enhance after an observer exists; the page remains visible without JS.
   const revealObserver = new IntersectionObserver((entries) => {
@@ -120,6 +120,13 @@ function updateScrollEffects() {
   scrollFrame = 0;
   const distance = document.documentElement.scrollHeight - window.innerHeight;
   progress.style.transform = `scaleX(${distance > 0 ? Math.min(1, Math.max(0, window.scrollY / distance)) : 0})`;
+  const timeline = document.querySelector(".timeline");
+  if (timeline) {
+    const rect = timeline.getBoundingClientRect();
+    const progressValue = Math.min(1, Math.max(0, (window.innerHeight * .7 - rect.top) / rect.height));
+    timeline.style.setProperty("--journey-progress", motionQuery.matches ? "1" : String(progressValue));
+    timeline.querySelectorAll("li").forEach(item => item.classList.toggle("reached", motionQuery.matches || item.getBoundingClientRect().top < window.innerHeight * .7));
+  }
   if (heroPhoto) {
     const offset = motionQuery.matches ? 0 : Math.min(window.scrollY * .045, 18);
     heroPhoto.style.translate = `0 ${offset}px`;
