@@ -33,3 +33,21 @@ Photo sizes are supplied in WebP with JPEG fallbacks. Content and links remain u
 The project screenshots show the public HerbiQ companion site, Kerala Routes welcome screen and a Sky Runner gameplay image published on its itch.io page. HerbiQ's WRO Silver Badge is credited to Team Delta Malabar. The plant explorer is a small educational UI demo, with local sample data and no server or camera requirement.
 
 Keyboard controls: Ctrl/Cmd+K opens search; type to filter; arrow keys move through results; Enter opens a result; Escape closes the dialog. A visible Search button provides the same function on mobile. Themes persist when local storage is available. Project content and links remain available without JavaScript.
+
+## Cinematic interface (October 2026)
+
+The current interface uses the supplied portrait image sequence and a pinned,
+scroll-controlled introduction. Content, project URLs, filters, the plant demo,
+command search and both themes are retained. Shared presentation lives in
+`cinematic.css`; sequence loading and scroll mapping live in `cinematic.js`.
+
+`assets/sequence/` contains an initial WebP poster and eight WebP strips, each
+containing ten 800×450 frames vertically. The 80 sampled frames total about
+1.7 MB including the poster. Only neighbouring strips stay decoded. The poster
+is visible before loading or if loading fails. Reduced-motion users receive a
+static, unpinned introduction; data-saver users start with animation paused.
+The visible motion button can also pause the sequence. Scrolling stays native.
+
+Validation: 360–1920px overflow checks; Chromium phone and desktop interaction
+checks; scroll sequence and pause; all project case pages; light/dark WCAG
+AA automated checks; no-JavaScript content. No build dependencies added.

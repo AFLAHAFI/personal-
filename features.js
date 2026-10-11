@@ -9,7 +9,7 @@
       button.innerHTML = light ? '☾ <span>Dark</span>' : '☀ <span>Light</span>';
       button.setAttribute('aria-label', `Switch to ${light ? 'dark' : 'light'} theme`);
     });
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', light ? '#f5f7f2' : '#0c1416');
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', light ? '#edf2f6' : '#080d13');
   }
   themeButtons.forEach(button => button.addEventListener('click', () => {
     const theme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';

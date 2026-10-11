@@ -29,13 +29,13 @@
     />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <script src="theme.js?v=20261011-portfolio"></script>
-    <link rel="stylesheet" href="style.css?v=20261011-portfolio" />
-    <link rel="stylesheet" href="features.css?v=20261011-portfolio" />
-    <script src="script.js?v=20261011-portfolio" defer></script>
-    <script src="features.js?v=20261011-portfolio" defer></script>
-  </head>
-  <body>
+    <script src="theme.js?v=20261012-cinematic"></script>
+    <link rel="stylesheet" href="style.css?v=20261012-cinematic" />
+    <link rel="stylesheet" href="features.css?v=20261012-cinematic" />
+    <script src="script.js?v=20261012-cinematic" defer></script>
+    <script src="features.js?v=20261012-cinematic" defer></script>
+  <link rel="stylesheet" href="cinematic.css?v=20261012"><script src="cinematic.js?v=20261012" defer></script></head>
+  <body class="cinematic">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <nav class="nav wrap" aria-label="Main navigation">
@@ -67,81 +67,18 @@
       </nav>
     </header>
     <main id="main">
-      <section class="hero wrap" id="home" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <div class="eyebrow">
-            <span class="status-dot"></span> A STUDENT. A BUILDER. ALWAYS
-            LEARNING.
+
+      <section class="cinema-hero" id="home" aria-labelledby="hero-title">
+        <div class="cinema-stage">
+      <div class="cinema-backdrop" aria-hidden="true"><img src="assets/sequence/poster.webp" alt="" width="1280" height="720" fetchpriority="high"><canvas id="portrait-sequence"></canvas></div>
+          <div class="cinema-top wrap"><p class="eyebrow">AFLAH / STUDENT DEVELOPER</p><p>KERALA, INDIA <span>↗</span></p></div>
+          <div class="cinema-intro wrap">
+            <div><p class="eyebrow">CURIOUS MIND. HANDS-ON BUILDER.</p><h1 id="hero-title">Ideas into<br><em>real things.</em></h1><p class="cinema-name">Hi, I'm Aflah.</p></div>
+            <div class="cinema-summary"><p class="hero-role">Student Developer · Robotics Builder<br>AI & Technology Creator</p><p>I build robotics projects, interactive websites, simulation games and educational tools.</p><a class="button primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a></div>
           </div>
-          <p class="hello">Hi, I'm</p>
-          <h1 id="hero-title">Aflah<span>.</span></h1>
-          <p class="hero-role">
-            Student Developer <span>·</span> Robotics Builder<br />AI &
-            Technology Creator
-          </p>
-          <p class="hero-description">
-            Turning curiosity into things that work.<br />I build robotics
-            projects, interactive websites, simulation games and educational
-            tools.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#projects"
-              >View my projects <span aria-hidden="true">↗</span></a
-            ><a class="button secondary" href="https://github.com/AFLAHAFI"
-              >GitHub <span aria-hidden="true">↗</span></a
-            ><a class="text-link" href="#about"
-              >About me <span aria-hidden="true">↓</span></a
-            >
-          </div>
-          <div class="hero-meta">
-            <span
-              ><svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 0 1 14 0Z" />
-                <circle cx="12" cy="10" r="2.5" /></svg
-              >Kerala, India</span
-            ><span>Grade 9 · AKM HSS Kottoor</span>
-          </div>
+          <div class="cinema-second wrap"><p class="eyebrow">HARDWARE. SOFTWARE. A LITTLE CURIOSITY.</p><h2>Learning by doing.<br>Building with purpose.</h2><p>Grade 9 · AKM HSS Kottoor<br>One idea. Many ways to build it.</p><a class="text-link" href="#about">Meet the person behind the projects ↗</a></div>
+          <div class="cinema-bottom wrap"><a href="#projects">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a><span>ROBOTICS / WEB / INTERACTIVE WORLDS</span><button id="motion-toggle" type="button" hidden aria-pressed="false">Pause motion</button></div>
         </div>
-        <div class="hero-visual">
-          <div class="portrait-label">
-            <span>THE PERSON BEHIND THE PROJECTS</span
-            ><span aria-hidden="true">↘</span>
-          </div>
-          <div class="portrait-frame">
-            <picture
-              ><source
-                type="image/webp"
-                srcset="
-                  assets/aflah-portrait-480.webp 480w,
-                  assets/aflah-portrait-900.webp 900w
-                "
-                sizes="(max-width: 760px) 90vw, 430px" />
-              <img
-                src="assets/aflah-portrait.jpg"
-                width="900"
-                height="1200"
-                alt="Aflah outdoors wearing a black shirt"
-                fetchpriority="high"
-            /></picture>
-            <div class="portrait-caption">
-              <span class="status-dot"></span> Learning by building.<span
-                class="caption-code"
-                aria-hidden="true"
-                >&lt;/&gt;</span
-              >
-            </div>
-          </div>
-          <div class="build-note">
-            <span class="note-icon" aria-hidden="true">⌘</span>
-            <div>
-              <span class="micro">HARDWARE MEETS SOFTWARE</span>
-              <p>One idea. Many ways to build it.</p>
-            </div>
-          </div>
-        </div>
-        <a class="scroll-cue" href="#projects"
-          ><span aria-hidden="true">↓</span> A selection of what I'm building</a
-        >
       </section>
       <div class="discipline-strip" aria-label="Areas of interest">
         <div class="wrap">
@@ -215,13 +152,13 @@
 <article data-category="games" class="project-card featured reveal">
             <div class="project-visual routes-visual">
               <div class="visual-top">
-                <span>KERALA ROUTES / MULTIPLAYER</span><span>WORLD STUDY</span>
+                <span>KERALA ROUTES / MULTIPLAYER</span><span>LIVE PROJECT</span>
               </div>
               <img
-                src="assets/routes.svg"
+                src="assets/kerala-routes-screen.webp"
                 width="600"
                 height="320"
-                alt="Illustrated Kerala Routes road network with a bus and Kozhikode landmarks"
+                alt="Kerala Routes multiplayer game welcome screen"
                 loading="lazy"
               />
               <div class="visual-bottom">
@@ -255,7 +192,7 @@
               </div>
             </div>
           </article>
-<article data-category="web" class="project-card compact reveal">
+<article data-category="web" class="project-card compact reveal"><img class="card-preview" src="assets/herbiq-screen.webp" width="1280" height="800" loading="lazy" alt="HerbiQ visitor website plant explorer">
             <div class="small-card-top">
               <span class="project-icon" aria-hidden="true">⌘</span
               ><span class="micro">WEB APPLICATION</span>
@@ -274,7 +211,7 @@
               >Visit website <span aria-hidden="true">↗</span></a
             >
           </article>
-<article data-category="games" class="project-card compact reveal">
+<article data-category="games" class="project-card compact reveal"><img class="card-preview" src="assets/sky-runner-screen.webp" width="1364" height="606" loading="lazy" alt="Aircraft cabin in Kerala Sky Runner">
             <div class="small-card-top">
               <span class="project-icon" aria-hidden="true">↗</span
               ><span class="micro">SIMULATION PROJECT</span>
